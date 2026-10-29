@@ -4,6 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de instrumentos musicales - Inicio</title>
+    <style>
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .grid-articulos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    article {
+        border: 1px solid #ccc;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 350px; /* Ajusta este número si lo quieres más alto o más estrecho */
+        object-fit: cover; 
+        border-bottom: 3px solid #333; /* Opcional: una línea para separar el banner del título */
+    }
+</style>
 </head>
 <body>
 
@@ -23,7 +51,150 @@
         </nav>
     </header>
 
+    <main>
+        <!-- Banner con foto de la tienda -->
+        <div class="banner">
+            <img src="images/interior_tienda.jpg" alt="Interior de la tienda" width="600" height="300">
+        </div>
+
+        <!-- Título de la página -->
+        <h1>Tienda de instrumentos</h1> 
+
+        <!-- Sección de los artículos más vendidos -->
+        <section id="mas-vendidos">
+            <h2>Artículos más vendidos</h2>
+            <div class="grid-articulos">
+
+                <!-- Artículo 1 -->
+                <article>
+                    <img srcset="images/ortega-peq 480w, images/ortega-med.jpg 800w, images/ortega-grand.jpg 1200w" 
+                         sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+                         src="images/ortega-grand.jpg" alt="Guitarra clásica Ortega">
+                    <h3>Guitarra Clásica Ortega R131</h3>
+                    <p class="precio">256,00 €</p>
+                </article>  
+
+                <!-- Artículo 2 -->
+                <article>
+                    <img srcset="images/teclado-peq 480w, images/teclado-med.jpg 800w, images/teclado-grand.jpg 1200w" 
+                         sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+                         src="images/teclado-grand.jpg" alt="Teclado Yamaha">
+                    <h3>Teclado Yamaha PSR-E383</h3>
+                    <p class="precio">188,00 €</p>
+                </article>
+
+                <!-- Artículo 3 -->
+                <article>
+                    <img srcset="images/bateria-peq 480w, images/bateria-med.jpg 800w, images/bateria-grand.jpg 1200w" 
+                         sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+                         src="images/bateria-grand.jpg" alt="Batería Electrónica Millenium">
+                    <h3>Batería electrónica Millenium MPS-850</h3>
+                    <p class="precio">598,00 €</p>
+                </article>
+
+                <!-- Artículo 4 -->
+                <article>
+                    <img srcset="images/bajo-peq.jpg 480w, images/bajo-med.jpg 800w, images/bajo-grand.jpg 1200w" 
+                         sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+                         src="images/bajo-grand.jpg" alt="Bajo Harley Benton">
+                    <h3>Bajo Harley Benton JB-75MN NA Vintage Series</h3>
+                    <p class="precio">179,00 €</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección de categoría relevante 1 -->
+        <section id="guitarras-electricas">
+            <h2>Guitarras Eléctricas</h2>
+            <div class="grid-articulos">
+                
+                <article>
+                    <img srcset="images/harley-peq.jpg 480w, images/harley-med.jpg 800w, images/harley-grand.jpg 1200w" 
+                         sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+                         src="images/harley-grand.jpg" alt="Guitarra Harley Benton">
+                    <h3>Harley Benton ST-20HSS SBK Standard Series</h3>
+                    <p class="precio">111,00 €</p>
+                </article>
+
+                <article>
+                    <img srcset="images/squier-peq.jpg 480w, images/squier-med.jpg 800w, images/squier-grand.jpg 1200w" 
+                         sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+                         src="images/squier-grand.jpg" alt="Guitarra Squier">
+                    <h3>Squier Sonic Strat HSS Black</h3>
+                    <p class="precio">169,00 €</p>
+                </article>
+
+                <article>
+                    <img srcset="images/fender-peq.jpg 480w, images/fender-med.jpg 800w, images/fender-grand.jpg 1200w" 
+                         sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+                         src="images/fender-grand.jpg" alt="Guitarra Fender">
+                    <h3>Fender Player II Strat RW BCG</h3>
+                    <p class="precio">777,00 €</p>
+                </article>
+
+                <article>
+                    <img srcset="images/ibanez-peq.jpg 480w, images/ibanez-med.jpg 800w, images/ibanez-grand.jpg 1200w" 
+                         sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+                         src="images/ibanez-grand.jpg" alt="Guitarra Ibanez">
+                    <h3>Ibanez GRG170DX-BKN</h3>
+                    <p class="precio">253,00 €</p>
+                </article>
+                
+            </div>
+        </section>
+
+        <!-- Sección de categoría relevante 2 -->
+        <section id="audio-profesional">
+            <h2>Audio Profesional</h2>
+            <div class="grid-articulos">
+                
+                <article>
+                    <img srcset="images/shure-peq.jpg 480w, images/shure-med.jpg 800w, images/shure-grand.jpg 1200w" 
+                         sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+                         src="images/shure-grand.jpg" alt="Microfono Shure">
+                    <h3>Micrófono Shure SM 7 B</h3>
+                    <p class="precio">398,00 €</p>
+                </article>
+                
+                <article>
+                    <img srcset="images/Focusrite-peq.jpg 480w, images/Focusrite-med.jpg 800w, images/Focusrite-grand.jpg 1200w" 
+                         sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+                         src="images/Focusrite-grand.jpg" alt="Interfaz de audio Focusrite">
+                    <h3>Tarjeta de sonido Focusrite Scarlett 2i2 4th Generation</h3>
+                    <p class="precio">188,00 €</p>
+                </article>
+
+                <article>
+                    <img srcset="images/Behringer-peq.jpg 480w, images/Behringer-med.jpg 800w, images/Behringer-grand.jpg 1200w" 
+                         sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+                         src="images/Behringer-grand.jpg" alt="Mesa de mezcla Behringer">
+                    <h3>Mesa de mezcla Behringer Xenyx X1204 USB</h3>
+                    <p class="precio">159,00 €</p>
+                </article>
+
+                <article>
+                    <img srcset="images/Marshall-peq.jpg 480w, images/Marshall-med.jpg 800w, images/Marshall-grand.jpg 1200w" 
+                         sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+                         src="images/Marshall-grand.jpg" alt="Amplificador Marshall">
+                    <h3>Amplificador Marshall AS50D</h3>
+                    <p class="precio">195,00 €</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="enlaces-footer">
+            <a href="index.html">Inicio</a> | 
+            <a href="catalogo.html">Catálogo</a> | 
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Tienda de Instrumentos Musicales. Creado por Ariadna Alicia Ruiz Castillo.</p>
+        </div>
+    </footer>
+
+
 </body>
-
-
 </html>
